@@ -4,9 +4,9 @@
 Framework Java para bases de datos NoSQL
 
 
-[Libro](http://leanpub.com/jmoordbcore)
+[Libro jmoordb-core](http://leanpub.com/jmoordbcore)
 
-Utiliza 
+Este proyecto utiliza  como base
 [jmoordb-core-processor-genesis](https://github.com/avbravo/jmoordb-core-processor-genesis.git)
 
 
