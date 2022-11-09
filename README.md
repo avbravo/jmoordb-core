@@ -6,6 +6,10 @@ Framework Java para bases de datos NoSQL
 
 [Libro](http://leanpub.com/jmoordbcore)
 
+Utiliza 
+[jmoordb-core-processor-genesis](https://github.com/avbravo/jmoordb-core-processor-genesis.git)
+
+
 Ejemplo
 
 Defina una entidad
