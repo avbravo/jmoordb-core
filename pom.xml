@@ -35,11 +35,13 @@
         <!--
         jersey
         -->
-        
+
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-common</artifactId>
-            <version>3.1.0-M3</version>
+            <!--<version>3.1.0</version>-->
+            <version>3.0.8</version>
+            <!--<version>3.1.0-M3</version>-->
             <type>jar</type>
         </dependency>
        
