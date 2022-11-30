@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.avbravo.jmoordb.core.processor</groupId>
     <artifactId>jmoordb-core</artifactId>
-    <version>0.2.100</version>
+    <version>0.3</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,36 +31,24 @@
             <version>4.6.0</version>
         </dependency>
        
-        
-        <!--
-        jersey
-        -->
-
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-common</artifactId>
-            <!--<version>3.1.0</version>-->
-            <version>3.0.8</version>
-            <!--<version>3.1.0-M3</version>-->
-            <type>jar</type>
-        </dependency>
-       
+     
        
        
        <!-- 
 
             Jmoordb-core-genesis
         -->
-<!--      	<dependency>
+   	<dependency>
 	    <groupId>com.github.avbravo</groupId>
 	    <artifactId>jmoordb-core-processor-genesis</artifactId>
-	    <version>0.1</version>
-	</dependency>-->
-        <dependency>
+	    <version>0.2</version>
+	</dependency>
+        
+<!--        <dependency>
             <groupId>com.avbravo.jmoordb.core.processor-genesis</groupId>
             <artifactId>jmoordb-core-processor-genesis</artifactId>
             <version>0.1.2</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>

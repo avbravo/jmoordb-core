@@ -12,7 +12,7 @@ import java.util.HashMap;
 import org.bson.BsonDocument;
 import org.bson.Document;
 import org.bson.conversions.Bson;
-import org.glassfish.jersey.uri.UriComponent;
+
 
 /**
  *
@@ -237,17 +237,5 @@ return filter;
     }
     // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="String encodeJson(String query)" >
-
-    public static String encodeJson(String query) {
-        try {
-
-            return UriComponent.encode(query, UriComponent.Type.QUERY_PARAM_SPACE_ENCODED);
-        } catch (Exception e) {
-            MessagesUtil.error(MessagesUtil.nameOfClassAndMethod() + "error: " + e.getLocalizedMessage());
-        }
-        return query;
-
-    }
-    // </editor-fold>
+  
 }
