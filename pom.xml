@@ -45,11 +45,17 @@
 	    <version>${jmoordb-core-processor-genesis.version}</version>
 	</dependency>-->
         
-       <dependency>
+<!--       <dependency>
             <groupId>com.avbravo.jmoordb.core.processor-genesis</groupId>
             <artifactId>jmoordb-core-processor-genesis</artifactId>
-            <version>0.4.100</version>
-       </dependency>
+            <version>0.4.200</version>
+       </dependency>-->
+       
+       <dependency>
+	    <groupId>com.github.avbravo</groupId>
+	    <artifactId>jmoordb-core-processor-genesis</artifactId>
+	    <version>0.4.100</version>
+	</dependency>
     </dependencies>
     <build>
         <plugins>
