@@ -3,12 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.avbravo.jmoordb.core.processor</groupId>
     <artifactId>jmoordb-core</artifactId>
-    <version>0.4</version>
+    <version>0.4.200</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <jmoordb-core-processor-genesis.version>0.4</jmoordb-core-processor-genesis.version>
      
     </properties>
     
@@ -38,17 +39,17 @@
 
             Jmoordb-core-genesis
         -->
-   	<dependency>
+<!--   	<dependency>
 	    <groupId>com.github.avbravo</groupId>
 	    <artifactId>jmoordb-core-processor-genesis</artifactId>
-	    <version>0.2</version>
-	</dependency>
+	    <version>${jmoordb-core-processor-genesis.version}</version>
+	</dependency>-->
         
-<!--        <dependency>
+       <dependency>
             <groupId>com.avbravo.jmoordb.core.processor-genesis</groupId>
             <artifactId>jmoordb-core-processor-genesis</artifactId>
-            <version>0.1.2</version>
-        </dependency>-->
+            <version>0.4.100</version>
+       </dependency>
     </dependencies>
     <build>
         <plugins>
