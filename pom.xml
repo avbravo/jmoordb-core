@@ -39,13 +39,11 @@
 
             Jmoordb-core-genesis
         -->
-   	<dependency>
+  	<dependency>
 	    <groupId>com.github.avbravo</groupId>
 	    <artifactId>jmoordb-core-processor-genesis</artifactId>
 	    <version>${jmoordb-core-processor-genesis.version}</version>
 	</dependency>
-        
-    
      
     </dependencies>
     <build>

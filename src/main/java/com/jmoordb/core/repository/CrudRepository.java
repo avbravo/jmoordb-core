@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.jmoordb.core.repository;
-import com.jmoordb.core.annotation.repository.Count;
 import com.jmoordb.core.annotation.repository.DeleteBy;
 import com.jmoordb.core.annotation.repository.Find;
 import com.jmoordb.core.annotation.repository.Save;
@@ -42,5 +41,7 @@ public interface CrudRepository<T, PK> {
     
     @DeleteBy
     public Long deleteByPk(PK id);
+    
+
 
 }
