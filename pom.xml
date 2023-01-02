@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.avbravo.jmoordb.core.processor</groupId>
     <artifactId>jmoordb-core</artifactId>
-    <version>0.5.200</version>
+    <version>0.5.300</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -47,7 +47,7 @@
         <dependency>
             <groupId>com.avbravo.jmoordb.core.processor-genesis</groupId>
             <artifactId>jmoordb-core-processor-genesis</artifactId>
-            <version>0.5.200</version>
+            <version>0.5.300</version>
         </dependency>
     </dependencies>
     <build>
