@@ -3,16 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.jmoordb.core.repository;
+
 import com.jmoordb.core.annotation.repository.CoreException;
 import com.jmoordb.core.annotation.repository.DeleteBy;
+import com.jmoordb.core.annotation.repository.DeleteMany;
 import com.jmoordb.core.annotation.repository.Find;
 import com.jmoordb.core.annotation.repository.Save;
 import com.jmoordb.core.annotation.repository.Update;
+import com.jmoordb.core.annotation.repository.UpdateMany;
 import com.jmoordb.core.model.Pagination;
+import com.jmoordb.core.model.Search;
 import com.jmoordb.core.model.Sorted;
 import com.jmoordb.core.processor.model.JmoordbException;
 import java.util.List;
 import java.util.Optional;
+import org.bson.conversions.Bson;
 
 /**
  *
@@ -38,13 +43,18 @@ public interface CrudRepository<T, PK> {
     @Find()
     public List<T> findAllPaginationSorted(Pagination pagination, Sorted sorted);
 
-   
     public Optional<T> findByPk(PK id);
-    
+
     @DeleteBy
     public Long deleteByPk(PK id);
+
+    @DeleteMany
+    public Long deleteMany(Search search);
     
-@CoreException()
-public JmoordbException getJmoordbException();
+    @UpdateMany
+    public Long updateMany(Bson query, Bson update);
+
+    @CoreException()
+    public JmoordbException getJmoordbException();
 
 }
