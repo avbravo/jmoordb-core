@@ -4,6 +4,7 @@
  */
 package com.jmoordb.core.repository;
 
+import com.jmoordb.core.context.ContextJMoordbCore;
 import com.jmoordb.core.annotation.repository.CoreException;
 import com.jmoordb.core.annotation.repository.DeleteBy;
 import com.jmoordb.core.annotation.repository.DeleteMany;
@@ -25,31 +26,43 @@ import org.bson.conversions.Bson;
  */
 public interface CrudRepository<T, PK> {
 
+ default public  void setDinamicDatabase(String dataBase){
+ ContextJMoordbCore.mongodbdatabase = dataBase;
+ }
+ default public String getDinamicDatabase(){
+     if(ContextJMoordbCore.mongodbdatabase == null){
+         return "";
+     }else{
+          return ContextJMoordbCore.mongodbdatabase;
+     }
+
+ }
+    
     @Save
     public Optional<T> save(T t);
 
     @Update
-    public Boolean update(T t);
+    public Boolean update(T t );
 
     @Find()
-    public List<T> findAll();
+    public List<T> findAll( );
 
     @Find()
-    public List<T> findAllPagination(Pagination pagination);
+    public List<T> findAllPagination(Pagination paginationt );
 
     @Find()
-    public List<T> findAllSorted(Sorted sorted);
+    public List<T> findAllSorted(Sorted sorted );
 
     @Find()
-    public List<T> findAllPaginationSorted(Pagination pagination, Sorted sorted);
+    public List<T> findAllPaginationSorted(Pagination pagination, Sorted sorted );
 
-    public Optional<T> findByPk(PK id);
+    public Optional<T> findByPk(PK id );
 
     @DeleteBy
     public Long deleteByPk(PK id);
 
     @DeleteMany
-    public Long deleteMany(Search search);
+    public Long deleteMany(Search search );
     
     @UpdateMany
     public Long updateMany(Bson query, Bson update);
