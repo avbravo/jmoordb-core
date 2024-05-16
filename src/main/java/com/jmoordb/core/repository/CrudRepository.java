@@ -26,44 +26,57 @@ import org.bson.conversions.Bson;
  */
 public interface CrudRepository<T, PK> {
 
- default public  void setDinamicDatabase(String dataBase){
- ContextJMoordbCore.mongodbdatabase = dataBase;
- }
- default public String getDinamicDatabase(){
-     if(ContextJMoordbCore.mongodbdatabase == null){
-         return "";
-     }else{
-          return ContextJMoordbCore.mongodbdatabase;
-     }
+    default public void setDynamicDatabase(String dataBase) {
+        ContextJMoordbCore.mongodbdatabase = dataBase;
+    }
 
- }
-    
+    default public String getDynamicDatabase() {
+        if (ContextJMoordbCore.mongodbdatabase == null) {
+            return "";
+        } else {
+            return ContextJMoordbCore.mongodbdatabase;
+        }
+
+    }
+    default public void setDynamicCollection(String collection) {
+        ContextJMoordbCore.mongodbcollection = collection;
+    }
+
+    default public String getDynamicCollection() {
+        if (ContextJMoordbCore.mongodbcollection == null) {
+            return "";
+        } else {
+            return ContextJMoordbCore.mongodbcollection;
+        }
+
+    }
+
     @Save
     public Optional<T> save(T t);
 
     @Update
-    public Boolean update(T t );
+    public Boolean update(T t);
 
     @Find()
-    public List<T> findAll( );
+    public List<T> findAll();
 
     @Find()
-    public List<T> findAllPagination(Pagination paginationt );
+    public List<T> findAllPagination(Pagination paginationt);
 
     @Find()
-    public List<T> findAllSorted(Sorted sorted );
+    public List<T> findAllSorted(Sorted sorted);
 
     @Find()
-    public List<T> findAllPaginationSorted(Pagination pagination, Sorted sorted );
+    public List<T> findAllPaginationSorted(Pagination pagination, Sorted sorted);
 
-    public Optional<T> findByPk(PK id );
+    public Optional<T> findByPk(PK id);
 
     @DeleteBy
     public Long deleteByPk(PK id);
 
     @DeleteMany
-    public Long deleteMany(Search search );
-    
+    public Long deleteMany(Search search);
+
     @UpdateMany
     public Long updateMany(Bson query, Bson update);
 
