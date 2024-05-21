@@ -17,6 +17,7 @@ import com.jmoordb.core.model.Search;
 import com.jmoordb.core.model.Sorted;
 import com.jmoordb.core.processor.model.JmoordbException;
 import com.mongodb.client.ListIndexesIterable;
+import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoIterable;
 import java.util.List;
 import java.util.Optional;
@@ -93,5 +94,6 @@ public interface CrudRepository<T, PK> {
     public Optional<ListIndexesIterable<Document>> listIndexes();
     
      public Optional<MongoIterable<String>> listCollectionNames();
+     public Optional<MongoCollection<Document>> getCollection();
 
 }
