@@ -16,8 +16,11 @@ import com.jmoordb.core.model.Pagination;
 import com.jmoordb.core.model.Search;
 import com.jmoordb.core.model.Sorted;
 import com.jmoordb.core.processor.model.JmoordbException;
+import com.mongodb.client.ListIndexesIterable;
+import com.mongodb.client.MongoIterable;
 import java.util.List;
 import java.util.Optional;
+import org.bson.Document;
 import org.bson.conversions.Bson;
 
 /**
@@ -82,5 +85,13 @@ public interface CrudRepository<T, PK> {
 
     @CoreException()
     public JmoordbException getJmoordbException();
+    
+    public String createIndex(Bson bson );
+    
+    public void dropIndex(Bson bson );
+    
+    public Optional<ListIndexesIterable<Document>> listIndexes();
+    
+     public Optional<MongoIterable<String>> listCollectionNames();
 
 }
